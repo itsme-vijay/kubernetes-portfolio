@@ -57,3 +57,7 @@ kubectl exec -it nginx-pod -- /bin/bash
 - Kubernetes automatically pulls container images
 - kubectl exec allows entering running containers
 - Nginx default files are stored inside /usr/share/nginx/html
+
+## Real-World Use
+
+Pods are used to run containerized applications in Kubernetes clusters. Engineers use kubectl exec and logs for debugging running containers in production environments.
