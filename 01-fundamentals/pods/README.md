@@ -5,6 +5,14 @@ Learn how to create and manage Pods in Kubernetes.
 
 ---
 
+## Topics Covered
+
+- Pod Creation
+- Pod Logs
+- Pod Inspection
+- Container Access using kubectl exec
+- Nginx Default Files
+
 ## Pod Created
 - nginx-pod
 
