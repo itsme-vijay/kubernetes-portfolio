@@ -1,24 +1,17 @@
-
 # Kubernetes Pods
 
 ## Objective
-Learn how Kubernetes Pods work and how containers run inside them.
+Learn how to create and manage Pods in Kubernetes.
 
 ---
 
-## Topics Covered
-- Single Container Pod
-- Multi-Container Pod
-- Pod Lifecycle
-- Pod Logs
-- Pod Debugging
+## Pod Created
+- nginx-pod
 
 ---
 
-## YAML Files
-- nginx-pod.yaml
-- busybox-pod.yaml
-- multi-container-pod.yaml
+## YAML File
+- yaml/nginx-pod.yaml
 
 ---
 
@@ -32,20 +25,27 @@ kubectl get pods
 kubectl describe pod nginx-pod
 
 kubectl logs nginx-pod
+
+kubectl exec -it nginx-pod -- /bin/bash
 ```
 
 ---
 
-## Hands-On Practice
+## Pod Running
 
-- Created nginx pod
-- Checked pod logs
-- Used describe command
-- Executed commands inside container
-- Simulated pod failure
+![Pod Running](screenshots/nginx-pod-running.png)
+
+---
+
+## Executing Inside Container
+
+![Pod Exec](screenshots/nginx-pod-exec.png)
 
 ---
 
 ## Key Learning
 
-Pods are the smallest deployable units in Kubernetes and can contain one or more tightly coupled containers.
+- Pods are the smallest deployable units in Kubernetes
+- Kubernetes automatically pulls container images
+- kubectl exec allows entering running containers
+- Nginx default files are stored inside /usr/share/nginx/html
