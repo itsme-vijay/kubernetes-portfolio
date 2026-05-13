@@ -13,6 +13,8 @@ Learn how to create and manage Pods in Kubernetes.
 - Container Access using kubectl exec
 - Nginx Default Files
 
+---
+
 ## Pod Created
 - nginx-pod
 
