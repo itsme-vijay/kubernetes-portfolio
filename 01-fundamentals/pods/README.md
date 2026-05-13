@@ -61,3 +61,76 @@ kubectl exec -it nginx-pod -- /bin/bash
 ## Real-World Use
 
 Pods are used to run containerized applications in Kubernetes clusters. Engineers use kubectl exec and logs for debugging running containers in production environments.
+
+
+---
+
+# BusyBox Pod
+
+## Objective
+
+Learn how lightweight containers work in Kubernetes.
+
+---
+
+## Topics Covered
+
+- BusyBox Container
+- sleep Command
+- Container Shell Access
+- Container Exploration
+
+---
+
+## Pod Created
+
+- busybox-pod
+
+---
+
+## YAML File
+
+- yaml/busybox-pod.yaml
+
+---
+
+## Commands Used
+
+```bash
+kubectl apply -f busybox-pod.yaml
+
+kubectl get pods
+
+kubectl exec -it busybox-pod -- sh
+
+kubectl logs busybox-pod
+
+kubectl delete pod busybox-pod
+```
+
+---
+
+## Pod Running
+
+![BusyBox Pod Running](screenshots/busybox-pod-running.png)
+
+---
+
+## Executing Inside BusyBox Container
+
+![BusyBox Container Exec](screenshots/busybox-container-exec.png)
+
+---
+
+## Key Learning
+
+- Containers stop when the main process exits
+- sleep command keeps containers alive
+- BusyBox uses sh instead of bash
+- Containers provide isolated runtime environments
+
+---
+
+## Real-World Use
+
+BusyBox containers are commonly used for debugging, testing connectivity, checking DNS resolution, and troubleshooting Kubernetes networking issues.
