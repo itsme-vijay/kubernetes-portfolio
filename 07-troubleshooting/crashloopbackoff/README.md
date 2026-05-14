@@ -74,6 +74,12 @@ kubectl apply -f fixed.yaml
 
 ---
 
+## Fixed Describe Output
+
+![Fixed Pod](screenshots/running-describe-output.png)
+
+---
+
 ## Key Learning
 
 - CrashLoopBackOff is a restart loop
