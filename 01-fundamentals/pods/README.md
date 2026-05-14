@@ -136,3 +136,76 @@ kubectl delete pod busybox-pod
 ## Real-World Use
 
 BusyBox containers are commonly used for debugging, testing connectivity, checking DNS resolution, and troubleshooting Kubernetes networking issues.
+
+
+---
+
+# Multi-Container Pod
+
+## Objective
+
+Learn how multiple containers run inside a single Kubernetes Pod.
+
+---
+
+## Topics Covered
+
+- Multi-Container Pods
+- Shared Networking
+- localhost Communication
+- Sidecar Concept
+
+---
+
+## Pod Created
+
+- multi-container-pod
+
+---
+
+## YAML File
+
+- yaml/multi-container-pod.yaml
+
+---
+
+## Commands Used
+
+```bash
+kubectl apply -f multi-container-pod.yaml
+
+kubectl get pods
+
+kubectl describe pod multi-container-pod
+
+kubectl exec -it multi-container-pod -c busybox-container -- sh
+
+wget -qO- localhost
+```
+
+---
+
+## Pod Running
+
+![Multi Container Pod](screenshots/multi-container-pod-running.png)
+
+---
+
+## BusyBox Accessing Nginx using localhost
+
+![BusyBox to Nginx](screenshots/busybox-to-nginx-localhost.png)
+
+---
+
+## Key Learning
+
+- A single Pod can contain multiple containers
+- Containers inside same Pod share networking
+- localhost communication works inside same Pod
+- The -c flag is used to access specific containers
+
+---
+
+## Real-World Use
+
+Multi-container Pods are commonly used for sidecar architectures, logging agents, monitoring tools, and service mesh implementations.
